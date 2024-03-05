@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MyErrorController implements ErrorController{    
-    
+    //by this any url will be redirect to index.html
     @RequestMapping(path = "/error")
     public String handlError(){
         return "redirect:/"; //redirect to index

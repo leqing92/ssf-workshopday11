@@ -7,10 +7,19 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-         <div>
-             <img data-th-src="${imgUrl1}" class ="pic">
-             <img data-th-src="${imgUrl2}" class ="pic">
-             <img data-th-src="${imgUrl3}" class ="pic">
-         </div>         
+        <h1> Number Photo Generator </h1>
+        <form action="/" method="GET">
+            <!-- the for="count" in label allow user to go to the id="count" when they click label -->
+            <label for="count">Enter the number of images to generate:</label>            
+            <input type="number" id="count" name="countUrl" placeholder="Enter count (>=1)" required min="1">
+            <button type="submit">Generate</button>            
+        </form>
+        <!-- in div for generate image below the form as block -->
+        <div>
+            <!-- in span for generate image in-line -->
+            <span data-th-each="imageUrl : ${imageUrls}">
+                <img data-th-src="${imageUrl}" class="pic">
+            </span>
+        </div>         
     </body>
 </html>

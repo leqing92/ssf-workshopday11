@@ -5,3 +5,19 @@
     border-radius: 8px;
 }
 
+body{
+    text-align: center;
+}
+
+form {
+    display: inline-block; /* Set display to inline-block */
+    border: black 1px solid;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 10px 0px;
+}
+
+label {
+    display: flex;   
+}
+
