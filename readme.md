@@ -11,22 +11,20 @@ java -jar target/day11.workshop-0.0.1-SNAPSHOT.jar
 
 ## overwrite port at properties
 
-## FOR WINDOWS
+1. FOR WINDOWS
 #set SERVER_PORT = 9000
 #echo %SERVER_PORT%
 #unset >> set SERVER_PORT =     << ensure no white space
 
-## FOR MAC
+2. FOR MAC
 #export SERVER_PORT=9000
 #echo $SERVER_PORT
 #unset SERVER_PORT
 
-
-## to change in html
-    <div>        
-            <img data-th-src = "@{'/images/number' + ${photo1} + '.jpg'}" width =30%>
-            <img th:src = "@{'/images/number' + ${photo2} + '.jpg'}" width =30%>
-            <img data-th-src="${photo3}" width =30%>           
-    </div>
-
-## https://nixpacks.com/docs/providers/java
+## Railway
+1. to change in pom.xml to java version 19
+2. create environment properties in railway to NIXPACKS_JDK_VERSION : 19 ( https://nixpacks.com/docs/providers/java )
+3. To deploy : 
+    railway login
+    railway link
+    railway up
